@@ -1,0 +1,24 @@
+Well done!
+
+4
+a) -0.25
+The task for EmailPromotion was not "not EQUAL", it was "not INCLUDING".
+Correct answer:
+SELECT COUNT(DISTINCT PersonType) AS DistinctCount
+FROM Person.Person
+WHERE LastName LIKE 'M%' 
+		OR NOT EmailPromotion LIKE '%1%'
+    
+b) -0.75
+You will get incorrect result because of group by. We are selecting max rows with top+order, there's no need to use aggregative function.
+Corrrect answer:
+SELECT  TOP 3   *
+FROM Sales.SpecialOffer
+WHERE StartDate BETWEEN '2013-01-01' AND '2014-01-01'
+ORDER BY DiscountPct DESC
+
+e) -0.5
+Color is not asked in the select and when we will delete ot from the select, it will also be cancelled in the group by. Now the result is incorrect.
+Also, though your solution in WHERE is correct, it would be easier to use IS NOT NULL :) It's all about easy-reading of your code.
+
+Mark: 9
