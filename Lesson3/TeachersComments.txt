@@ -1,0 +1,13 @@
+Well done!
+
+2
+c) -0.25
+It would be better to have ID IS NULL in WHERE clause, not qty. We never know can Qty column be null by itself.
+
+3
+a)
+Forget about this way of merging tables :(
+JOIN is better a million times.
+
+Mark: 10
+
