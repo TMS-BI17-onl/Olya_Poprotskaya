@@ -1,0 +1,14 @@
+Well done!
+
+No negative comments, great job!
+
+
+4
+G) -0.75
+You were on the right path. You just needed to add conditions for cases when it saturday and when it's sunday.
+
+5 -1
+How can COUNT be 3 if the number of rows (and you see it) is 4? 
+Correct result: 4,2,4,4
+
+Mark: 8
