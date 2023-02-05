@@ -1,0 +1,18 @@
+--1
+SELECT *
+FROM Drivers
+WHERE experience_drivers NOT IN (3,5,6,10) 
+		AND place_registration LIKE  'eee' 
+--2
+SELECT d.PassportID, e.Rout
+FROM Drivers d
+		LEFT JOIN Expediter e ON d.id_drivers=e.id_drivers
+WHERE Rout IS NULL
+
+--3
+SELECT reg_number, arrival_time, departure_time, destination 
+FROM Avto a 
+	JOIN Expediter e
+	ON a.id_avto = e.id_avto
+	JOIN Route r ON e.id_route=r.id_route
+WHERE à.year_release = 2015 
