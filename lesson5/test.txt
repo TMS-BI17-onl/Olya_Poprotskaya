@@ -15,4 +15,7 @@ FROM Avto a
 	JOIN Expediter e
 	ON a.id_avto = e.id_avto
 	JOIN Route r ON e.id_route=r.id_route
-WHERE à.year_release = 2015 
+WHERE Ã .year_release = 2015 
+
+
+Mark:9
