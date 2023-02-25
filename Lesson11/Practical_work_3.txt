@@ -1,0 +1,26 @@
+--task_1
+SELECT TOP 5 k.название, MAX(count_all.count_p) AS max_count
+FROM Книги k 
+			JOIN (SELECT ID_книги, COUNT(1) AS count_p
+					FROM Продажи
+					GROUP BY ID_книги) count_all
+					ON k.ID_книги=count_all.ID_книги
+GROUP BY k.название
+ORDER BY max_count DESC
+
+--task_2
+SELECT Year, [18-30], [31-39], [40-55], [60+]
+FROM 
+	(SELECT DATENAME(YEAR,дата) AS Year
+		FROM Продажи p
+			JOIN (SELECT DATEDIFF(YEAR, дата_рождения, GETDATE()) AS возрастная_группа
+				FROM Покупатели) age
+			ON p.ID_покупателя=age.ID_покупателя
+	) AS Source_t
+PIVOT
+( 
+	COUNT(ID_продажи)
+	FOR возрастная_группа IN ([18-30], [31-39], [40-55], [60+])
+) AS Pivot_t
+WHERE YEAR(Year)-YEAR(GETDATE()) <=5
+ORDER BY Year
