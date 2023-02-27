@@ -19,3 +19,4 @@ SELECT Color, MAX(StandardCost) AS MAX_COST
 FROM Production.Product
 GROUP BY Color
 
+Mark: 6
