@@ -1,6 +1,6 @@
 Well done!
 
 No negative comments, great job!
-Modified Date usually shows just the data of last row update, for this task you need to use a "business date" - a date that have meaning in business, which is Due Date.
+Modified Date usually shows just the date of last row update, for this task you need to use a "business date" - a date that have meaning in business, which can be Due Date/StartDate/EndDate.
 
 Mark: 10
