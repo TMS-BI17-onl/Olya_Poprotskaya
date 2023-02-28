@@ -1,0 +1,26 @@
+Well done!
+
+-2
+In your solution there's no need in merge, you're doing all the calculation in other place.
+Solution is very intresting, but the task was still to practise MERGE.
+My view of solution:
+MERGE INTO res t
+USING data_for_merge s ON s.Alex=t.function_name
+WHEN MATCHED 
+	THEN UPDATE SET function_count=function_count+1
+WHEN NOT MATCHED AND Alex IS NOT NULL
+	THEN INSERT (function_name, function_count)
+	VALUES (Alex, 1);
+
+MERGE INTO res t
+USING data_for_merge s ON s.Barbara=t.function_name
+WHEN MATCHED 
+	THEN UPDATE SET function_count=function_count+1
+WHEN NOT MATCHED AND Barbara IS NOT NULL
+	THEN INSERT (function_name, function_count)
+	VALUES (Carlos, 1);
+  
+  ...
+
+
+Mark: 8
