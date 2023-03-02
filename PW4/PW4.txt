@@ -1,0 +1,22 @@
+--1
+INSERT INTO manufacturer (id, name, country_id)
+VALUES (5, 'HP', 4)
+
+
+--2
+
+
+--3
+SELECT name, price
+FROM
+	(
+	SELECT name, price, RANK() OVER (ORDER BY price DESC) as rnk
+	FROM product
+	) p
+WHERE rnk=1
+
+--4
+SELECT u.name, p.name, u.age
+FROM phone p
+	JOIN user u ON p.user_id=u.id
+WHERE p.name LIKE '_3%4'OR u.age > 35
