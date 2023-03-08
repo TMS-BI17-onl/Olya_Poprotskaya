@@ -20,3 +20,5 @@ SELECT u.name, p.name, u.age
 FROM phone p
 	JOIN user u ON p.user_id=u.id
 WHERE p.name LIKE '_3%4'OR u.age > 35
+
+Mark: 8 (let's add some points, but it's a secret. ;) It's not you fault that there were some technocal issues.)
