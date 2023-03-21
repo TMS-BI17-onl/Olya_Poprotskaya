@@ -54,3 +54,5 @@ SELECT u.email, n.category
 FROM Notifications n 
 		JOIN Users u ON n.user_id_bigint=u.id_bigint
 WHERE u.email=alex@gmail.com and n.is_read>50
+
+Mark: 10
