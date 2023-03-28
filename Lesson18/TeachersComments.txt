@@ -1,0 +1,12 @@
+Well done!
+
+-0.5
+No need in subqueries in tasks 2-4.
+
+5.
+-0.5
+You'll skip those people who is working in the same department after 10 years, 'cause their end date will be null.
+
+
+Mark: 9
+
